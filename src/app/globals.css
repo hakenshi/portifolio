@@ -3,17 +3,13 @@
 @tailwind utilities;
 
 :root {
-    --background-grid-color: rgba(255, 255, 255, 0.02);
+    --background-grid-color: rgba(138, 138, 138, 0.02);
     --background-fill-color: #000;
     scroll-behavior: smooth;
-
 }
 
 body {
-    /*width: 100%;*/
-    /*min-height: 100vh;*/
-    /*background-image: linear-gradient(45deg,rgba(128, 128, 128, 0.25), black);*/
-    @apply w-full min-h-screen bg-gradient-to-bl to-zinc-700/50 from-transparent bg-black;
+    @apply w-full min-h-screen bg-gradient-to-t to-zinc-700/50 from-transparent bg-black;
 }
 
 main {
@@ -47,11 +43,49 @@ main {
 }
 
 .text-shadow{
-    text-shadow: rgb(151, 76, 216) 0 0 45px;
+    text-shadow: rgb(102, 18, 183) 0 0 55px;
     background-clip: text;
 }
 
-
 .text-gradient {
-    @apply bg-gradient-to-b shadow-2xl from-sunset-orange-600 from-10% via-sunset-rose-600 to-sunset-magenta-900 bg-clip-text text-transparent;
+    background-image: linear-gradient(
+            to bottom,
+            #011f4c 10%,     /* Substitua por um tom de azul escuro */
+            #004cbf 15%,     /* sunset-rose-600 */
+            #0066ff 30%,    /* Substitua por um tom de azul claro */
+            white 51%,
+            black 51%,
+            #7e117c 60%,
+            #b90ebd 70%,
+            #dc16e3 75%,
+            white 100%/* sunset-magenta-900 */
+
+    )
+    ;
+    background-clip: text;
+    color: transparent;
+}
+
+.text-stroke{
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.4);
+}
+
+.responsive-svg{
+    width: 100%;
+    height: auto;
+    -webkit-filter: drop-shadow(0px 0px 40px #7e117c);
+}
+
+@media (min-width: 768px) {
+    .responsive-svg {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 767px) {
+    .responsive-svg {
+        width: 300px;
+        height: 300px;
+    }
 }

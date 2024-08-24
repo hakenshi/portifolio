@@ -24,7 +24,7 @@ export default function RootLayout({
         <html lang="en">
         <body className="font-sans">
         <header className="bg-transparent w-full text-white border-b border-b-zinc-800">
-            <nav className="flex items-center justify-center gap-5 p-5 ">
+            <nav className="flex items-center justify-center gap-5 p-5">
                 <div>
                     <a href="/">                    <FontAwesomeIcon icon={faHouse} />
                     </a>
