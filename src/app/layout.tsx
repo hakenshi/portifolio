@@ -30,7 +30,7 @@ export default function RootLayout({
                     </a>
                 </div>
                 <div className="flex items-center justify-between gap-5 text-2xl">
-                    <NavLink>
+                    <NavLink href="about">
                         About
                     </NavLink>
                     <NavLink>
